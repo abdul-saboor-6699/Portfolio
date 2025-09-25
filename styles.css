@@ -1,0 +1,197 @@
+/* Global Styles */
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #0a0a0acc;   /* Dark background */
+    color: #eaeaea;             /* Light text */
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+/* Header / Navigation pane */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px ;
+    border-bottom: 1px solid #1f1f1f; /* Dark divider */
+}
+header h1 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #00ff88;   /* Neon green accent */
+}
+nav a {
+    margin-left: 20px;
+    color: #eaeaea;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover {
+  color: #00ff88;
+}
+
+/* Headings */
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #00ff88;
+}
+h3 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #f1f1f1;
+}
+
+p, li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+/* Skills Section */
+ul li {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+ul li:hover {
+    background-color: #2a2a2a;
+}
+
+/* Projects Section */
+#projects-page div {
+  background: #111111;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #00ff88;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+#projects-page div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,255,136,0.2);
+}
+
+/* Contact section */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+input, textarea {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #111;
+    color: #eaeaea;
+}
+input:focus, textarea:focus {
+    border-color: #00ff88;
+    outline: none;
+}
+button {
+     padding: 12px 20px;
+     border: none;
+     background-color: #00ff88;
+     color: #0a0a0a;
+     font-weight: 600;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: 0.3s;
+}
+button:hover {
+  background-color: #00cc6a;
+}
+
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00ff88;
+  color: #0a0a0a;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #00cc6a;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+   border-top: 1px solid #1f1f1f; /* Dark divider */
+  color: #666;
+}
+
+.social-footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #00ff88;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.social-footer a:hover {
+  color: #00cc6a;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   /* middle instead of bottom */
+    padding: 40px 60px;
+    gap: 50px;
+}
+/* Left text */
+.intro-text {
+    flex: 1;
+    max-width: 600px;
+    margin-bottom: 60px;     /* so text isn’t stuck at bottom */
+}
+
+.intro-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Right picture */
+.intro-pic {
+    position: fixed;  /* fixed position */
+
+    bottom: -10px;  /* adjust how far from bottom */
+    right: 30px;   /* adjust how far from right */
+}
+
+.profile-pic {
+    width: 500px;  
+    height: auto;
+    filter: drop-shadow(0 0 5px #00ff88)
+  }
+
+  .accent {
+  color: #cccccc; 
+    font-weight: bold;
+  font-size:xx-large;
+}
