@@ -3,29 +3,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Body */
 body {
     background-color: #0a0a0acc;   /* Dark background */
-    color: #eaeaea;             /* Light text */
+    color: #eaeaea;               
     line-height: 1.8;
     padding: 0 20px;
 }
 
-/* Header / Navigation pane */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px ;
-    border-bottom: 1px solid #1f1f1f; /* Dark divider */
+    padding: 20px;
+    border-bottom: 1px solid #1f1f1f;
 }
 header h1 {
     font-weight: 700;
     font-size: 32px;
-    color: #00ff88;   /* Neon green accent */
+    color: #00ff88;
 }
 nav a {
     margin-left: 20px;
@@ -35,7 +35,7 @@ nav a {
     transition: 0.3s;
 }
 nav a:hover {
-  color: #00ff88;
+    color: #00ff88;
 }
 
 /* Headings */
@@ -83,7 +83,7 @@ ul li:hover {
   box-shadow: 0 4px 10px rgba(0,255,136,0.2);
 }
 
-/* Contact section */
+/* Contact Section */
 form {
   display: flex;
   flex-direction: column;
@@ -116,7 +116,6 @@ button:hover {
   background-color: #00cc6a;
 }
 
-
 /* Buttons */
 .btn {
   display: inline-block;
@@ -137,10 +136,9 @@ footer {
   margin-top: 40px;
   padding: 20px 0;
   text-align: center;
-   border-top: 1px solid #1f1f1f; /* Dark divider */
+  border-top: 1px solid #1f1f1f;
   color: #666;
 }
-
 .social-footer a {
   margin: 0 10px;
   text-decoration: none;
@@ -151,25 +149,26 @@ footer {
 .social-footer a:hover {
   color: #00cc6a;
 }
+
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
-    align-items: center;   /* middle instead of bottom */
+    align-items: center;
     padding: 40px 60px;
     gap: 50px;
+    flex-wrap: wrap;  /* so text & pic stack on small screens */
 }
+
 /* Left text */
 .intro-text {
     flex: 1;
     max-width: 600px;
-    margin-bottom: 60px;     /* so text isn’t stuck at bottom */
 }
-
 .intro-text h2 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
-
 .intro-text p {
     font-size: 1.2rem;
     line-height: 1.8;
@@ -178,20 +177,20 @@ footer {
 
 /* Right picture */
 .intro-pic {
-    position: fixed;  /* fixed position */
-
-    bottom: -10px;  /* adjust how far from bottom */
-    right: 30px;   /* adjust how far from right */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.profile-pic {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 0 5px #00ff88);
 }
 
-.profile-pic {
-    width: 500px;  
-    height: auto;
-    filter: drop-shadow(0 0 5px #00ff88)
-  }
-
-  .accent {
-  color: #cccccc; 
-    font-weight: bold;
-  font-size:xx-large;
+/* Accent text */
+.accent {
+  color: #cccccc;
+  font-weight: bold;
+  font-size: xx-large;
 }
