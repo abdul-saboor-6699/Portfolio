@@ -3,29 +3,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 
 /* Body */
 body {
     background-color: #0a0a0acc;   /* Dark background */
-    color: #eaeaea;               
+    color: #eaeaea;             /* Light text */
     line-height: 1.8;
     padding: 0 20px;
 }
 
-/* Header */
+/* Header / Navigation pane */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #1f1f1f;
+    padding: 20px ;
+    border-bottom: 1px solid #1f1f1f; /* Dark divider */
 }
 header h1 {
     font-weight: 700;
     font-size: 32px;
-    color: #00ff88;
+    color: #00ff88;   /* Neon green accent */
 }
 nav a {
     margin-left: 20px;
@@ -35,7 +35,7 @@ nav a {
     transition: 0.3s;
 }
 nav a:hover {
-    color: #00ff88;
+  color: #00ff88;
 }
 
 /* Headings */
@@ -83,7 +83,7 @@ ul li:hover {
   box-shadow: 0 4px 10px rgba(0,255,136,0.2);
 }
 
-/* Contact Section */
+/* Contact section */
 form {
   display: flex;
   flex-direction: column;
@@ -116,6 +116,7 @@ button:hover {
   background-color: #00cc6a;
 }
 
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -136,9 +137,10 @@ footer {
   margin-top: 40px;
   padding: 20px 0;
   text-align: center;
-  border-top: 1px solid #1f1f1f;
+   border-top: 1px solid #1f1f1f; /* Dark divider */
   color: #666;
 }
+
 .social-footer a {
   margin: 0 10px;
   text-decoration: none;
@@ -154,21 +156,23 @@ footer {
 .hero {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;   /* middle instead of bottom */
     padding: 40px 60px;
     gap: 50px;
-    flex-wrap: wrap;  /* so text & pic stack on small screens */
 }
 
 /* Left text */
 .intro-text {
     flex: 1;
     max-width: 600px;
+    margin-bottom: 60px;     /* so text isn’t stuck at bottom */
 }
+
 .intro-text h2 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
+
 .intro-text p {
     font-size: 1.2rem;
     line-height: 1.8;
@@ -180,17 +184,35 @@ footer {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
 .profile-pic {
-    width: 100%;
-    max-width: 400px;
+    max-width: 100%;     /* never overflow container */
+    width: 350px;        /* default size for desktop */
     height: auto;
     filter: drop-shadow(0 0 5px #00ff88);
 }
 
-/* Accent text */
 .accent {
-  color: #cccccc;
+  color: #cccccc; 
   font-weight: bold;
   font-size: xx-large;
+}
+
+/* ✅ Responsive Fix for Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;   /* stack vertically */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .intro-text {
+    margin-bottom: 20px;
+  }
+
+  .profile-pic {
+    width: 200px;   /* smaller image on mobile */
+  }
 }
