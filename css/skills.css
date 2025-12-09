@@ -1,0 +1,219 @@
+/* ===================================
+   SKILLS SECTION STYLES
+   =================================== */
+
+.skills-title {
+    background: linear-gradient(to right, var(--accent-pink), var(--accent-purple), var(--accent-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, var(--card-bg), rgba(17, 24, 39, 0.5));
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(34, 211, 238, 0.2);
+}
+
+[data-theme="light"] .skill-category {
+    background: linear-gradient(135deg, var(--glass-bg), rgba(255, 255, 255, 0.7));
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .skill-category:hover {
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+}
+
+.skill-category.programming {
+    border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.skill-category.programming:hover {
+    box-shadow: 0 20px 40px rgba(34, 211, 238, 0.2);
+}
+
+.skill-category.webdev {
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.skill-category.webdev:hover {
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.skill-category.tools {
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.skill-category.tools:hover {
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+}
+
+.skill-category.soft-skills {
+    border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.skill-category.soft-skills:hover {
+    box-shadow: 0 20px 40px rgba(236, 72, 153, 0.2);
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--accent-cyan);
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover .category-title {
+    transform: translateY(-5px);
+}
+
+.skill-category.programming .category-title {
+    color: var(--accent-cyan);
+}
+
+.skill-category.webdev .category-title {
+    color: var(--accent-blue);
+}
+
+.skill-category.tools .category-title {
+    color: var(--accent-purple);
+}
+
+.skill-category.soft-skills .category-title {
+    color: var(--accent-pink);
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover .skill-item {
+    transform: translateY(-3px);
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    color: #d1d5db;
+    font-weight: 500;
+}
+
+[data-theme="light"] .skill-name {
+    color: #475569;
+}
+
+.skill-percent {
+    color: var(--accent-cyan);
+    font-weight: 600;
+}
+
+.skill-category.webdev .skill-percent {
+    color: var(--accent-blue);
+}
+
+.skill-category.tools .skill-percent {
+    color: var(--accent-purple);
+}
+
+.skill-bar {
+    height: 0.5rem;
+    background-color: rgba(55, 65, 81, 0.7);
+    border-radius: 9999px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 0.25rem;
+}
+
+.skill-category:hover .skill-bar {
+    transform: scaleY(1.2);
+}
+
+[data-theme="light"] .skill-bar {
+    background-color: rgba(148, 163, 184, 0.3);
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 1s ease-in-out;
+}
+
+.skill-category.programming .skill-progress {
+    background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue));
+}
+
+.skill-category.webdev .skill-progress {
+    background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+}
+
+.skill-category.tools .skill-progress {
+    background: linear-gradient(to right, var(--accent-purple), var(--accent-pink));
+}
+
+.skill-level {
+    display: block;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-align: right;
+    transition: all 0.3s ease;
+}
+
+[data-theme="light"] .skill-level {
+    color: #64748b;
+}
+
+.skill-category:hover .skill-level {
+    transform: translateY(-2px);
+}
+
+/* Soft Skills Grid */
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.soft-skill-badge {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+    color: var(--accent-pink);
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid rgba(236, 72, 153, 0.2);
+    transition: all 0.3s ease;
+}
+
+.soft-skill-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.2));
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.2);
+}
+
+[data-theme="light"] .soft-skill-badge {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05));
+    color: #db2777;
+    border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+[data-theme="light"] .soft-skill-badge:hover {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.1);
+}

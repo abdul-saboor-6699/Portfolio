@@ -1,0 +1,174 @@
+/* ===================================
+   RESET, VARIABLES & BASE STYLES - UPDATED LIGHT MODE
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1535;
+    --secondary-color: #2d1b4e;
+    --text-color: #ffffff;
+    --accent-cyan: #22d3ee;
+    --accent-blue: #3b82f6;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
+    --accent-orange: #f97316;
+    --accent-emerald: #10b981;
+    --bg-gradient: linear-gradient(135deg, #1a1535, #2d1b4e, #1a1535);
+    --card-bg: rgba(55, 65, 81, 0.5);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --nav-bg: rgba(26, 21, 53, 0.9);
+    --section-bg: rgba(30, 41, 59, 0.3);
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+}
+
+/* IMPROVED LIGHT MODE WITH BETTER CONTRAST */
+[data-theme="light"] {
+    --primary-color: #ffffff;
+    --secondary-color: #f8fafc;
+    --text-color: #111827; /* Darker text for better contrast */
+    --accent-cyan: #0ea5e9;
+    --accent-blue: #2563eb; /* Slightly darker blue */
+    --accent-purple: #7c3aed; /* Slightly darker purple */
+    --accent-pink: #db2777; /* Slightly darker pink */
+    --accent-orange: #ea580c; /* Slightly darker orange */
+    --accent-emerald: #059669; /* Slightly darker emerald */
+    --bg-gradient: linear-gradient(135deg, #ffffff, #f9fafb, #f1f5f9); /* Brighter gradient */
+    --card-bg: rgba(255, 255, 255, 0.95); /* More opaque for better contrast */
+    --glass-bg: rgba(255, 255, 255, 0.9); /* Less transparent */
+    --nav-bg: rgba(255, 255, 255, 0.98);
+    --section-bg: rgba(249, 250, 251, 0.9); /* Brighter section background */
+    --overlay-bg: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5rem 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.7s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue), var(--accent-purple));
+    color: white;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 25px rgba(34, 211, 238, 0.4);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.btn.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: button-loading-spinner 0.75s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+    from { transform: rotate(0turn); }
+    to { transform: rotate(1turn); }
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.5s ease;
+}
+
+.section:hover .section-title {
+    transform: translateY(-5px);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #9ca3af;
+    margin-bottom: 3rem;
+    font-size: 1.125rem;
+}
+
+[data-theme="light"] .section-subtitle {
+    color: #6b7280; /* Darker gray for better contrast */
+}

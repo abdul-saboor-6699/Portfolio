@@ -1,0 +1,141 @@
+/* ===================================
+   GRID LAYOUTS & RESPONSIVE STRUCTURE
+   =================================== */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(26, 21, 53, 0.7), rgba(45, 27, 78, 0.7));
+    position: relative;
+    overflow: hidden;
+    padding-top: 6rem !important;
+}
+
+[data-theme="light"] .hero {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(241, 245, 249, 0.7));
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* About Section Layout */
+.about {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(34, 211, 238, 0.1));
+}
+
+[data-theme="light"] .about {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(34, 211, 238, 0.05));
+}
+
+.about-content {
+    display: grid;
+    gap: 3rem;
+}
+
+/* Education Section */
+.education {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+}
+
+[data-theme="light"] .education {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.05), rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+/* Skills Section */
+.skills {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1), rgba(239, 68, 68, 0.1));
+}
+
+[data-theme="light"] .skills {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05));
+}
+
+/* Projects Section */
+.projects {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(239, 68, 68, 0.1), rgba(139, 92, 246, 0.1));
+}
+
+[data-theme="light"] .projects {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05));
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(34, 211, 238, 0.1), rgba(59, 130, 246, 0.1));
+    padding: 4rem 0;
+    min-height: auto;
+    overflow: visible;
+}
+
+[data-theme="light"] .contact {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(34, 211, 238, 0.05), rgba(59, 130, 246, 0.05));
+}
+
+/* Grid Layouts */
+.skills-grid-cols {
+    display: grid;
+    gap: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 3rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.about-text {
+    background: linear-gradient(135deg, var(--card-bg), rgba(17, 24, 39, 0.5));
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Media Queries for Grid Layouts */
+@media (min-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+    
+    .skills-grid-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-grid-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+}

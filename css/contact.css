@@ -1,0 +1,286 @@
+/* ===================================
+   CONTACT SECTION STYLES
+   =================================== */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.contact-item {
+    background: linear-gradient(135deg, var(--glass-bg), rgba(59, 130, 246, 0.1));
+    backdrop-filter: blur(8px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.7s;
+}
+
+.contact-item:hover::before {
+    left: 100%;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="light"] .contact-item {
+    background: linear-gradient(135deg, var(--glass-bg), rgba(255, 255, 255, 0.6));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+[data-theme="light"] .contact-item:hover {
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.1);
+}
+
+.contact-item.cyan-glass {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(59, 130, 246, 0.1));
+    border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.contact-item.purple-glass {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.contact-item.pink-glass {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(249, 115, 22, 0.1));
+    border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.contact-item.blue-glass {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    transition: all 0.4s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.contact-item.purple-glass .contact-icon {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+}
+
+.contact-item.pink-glass .contact-icon {
+    background: linear-gradient(135deg, var(--accent-pink), #f97316);
+}
+
+.contact-item.cyan-glass .contact-icon {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+}
+
+.contact-label {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-label {
+    transform: translateY(-3px);
+}
+
+[data-theme="light"] .contact-label {
+    color: #64748b;
+}
+
+.contact-value {
+    font-size: 1.125rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+
+.contact-item:hover .contact-value {
+    transform: translateY(-3px);
+}
+
+.contact-form {
+    background: linear-gradient(135deg, var(--card-bg), rgba(17, 24, 39, 0.5));
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.contact-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+}
+
+[data-theme="light"] .contact-form {
+    background: linear-gradient(135deg, var(--glass-bg), rgba(255, 255, 255, 0.7));
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .contact-form:hover {
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-form:hover .form-group {
+    transform: translateY(-3px);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    transition: all 0.3s ease;
+}
+
+.contact-form:hover .form-label {
+    transform: translateY(-2px);
+}
+
+[data-theme="light"] .form-label {
+    color: #64748b;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(55, 65, 81, 0.7);
+    border-radius: 0.75rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+    transform: scale(1.02);
+}
+
+[data-theme="light"] .form-input {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    color: var(--text-color);
+}
+
+[data-theme="light"] .form-input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 9rem;
+    max-height: 15rem;
+}
+
+.form-error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    min-height: 1.25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-error.show {
+    opacity: 1;
+}
+
+.form-status {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    min-height: 1.5rem;
+}
+
+.form-status.success {
+    color: #10b981;
+}
+
+.form-status.error {
+    color: #ef4444;
+}
+
+.form-status.warning {
+    color: #f59e0b;
+}
+
+/* Fix contact section overflow on mobile */
+@media (max-width: 767px) {
+    .contact {
+        padding: 3rem 0;
+        min-height: auto;
+    }
+    
+    .contact-grid {
+        gap: 2rem;
+    }
+    
+    .contact-form,
+    .contact-item {
+        padding: 1.25rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        font-size: 16px;
+    }
+    
+    .contact-value {
+        font-size: 1rem;
+    }
+}
